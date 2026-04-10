@@ -138,6 +138,7 @@ export default function ItemFilter() {
 
           return (
             <ListItem
+              component="div"
               key={item.name}
               disablePadding
               sx={{ mb: 0.5 }}
