@@ -76,7 +76,6 @@ export default function AbilityEffect() {
   );
 }
 
-// Giữ nguyên SectionTitle bên dưới
 const SectionTitle = ({
   icon,
   title,

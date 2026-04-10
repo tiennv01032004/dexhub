@@ -15,6 +15,8 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 
 export default function NotfoundPage() {
+  const url = typeof window !== "undefined" ? window.location.href : "";
+
   return (
     <Container maxWidth="md" sx={{ py: { xs: 4, md: 10 } }}>
       <Grid container spacing={2}>
@@ -54,8 +56,8 @@ export default function NotfoundPage() {
                 404 Not Found
               </Typography>
               <Typography variant="body1" color="text.secondary">
-                The url "<strong>{location.href}</strong>" could not be found.
-                It might be a typo or doesn't exist in the DexHub
+                The url "<strong>{url}</strong>" could not be found. It might be
+                a typo or doesn't exist in the DexHub
               </Typography>
             </Box>
             <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>

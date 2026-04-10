@@ -1,5 +1,10 @@
+import { Suspense } from "react";
 import ItemWrapper from "./components";
 
 export default function ItemPage() {
-  return <ItemWrapper />;
+  return (
+    <Suspense>
+      <ItemWrapper />;
+    </Suspense>
+  );
 }

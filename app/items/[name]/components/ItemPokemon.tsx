@@ -102,7 +102,6 @@ export default function ItemPokemon() {
                   <PokemonCard species={species} />
                 </Box>
 
-                {/* Version Tags Stream (Dòng chảy phiên bản) */}
                 <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.8 }}>
                   {p.version_details.map(
                     (detail: VersionDetail, idx: number) => {

@@ -97,7 +97,6 @@ export default function HomesRegion() {
                 },
               }}
             >
-              {/* Hình ảnh bản đồ gốc */}
               <Box
                 className="map-img"
                 component="img"
@@ -111,7 +110,6 @@ export default function HomesRegion() {
                 }}
               />
 
-              {/* Lớp phủ chi tiết khi Hover */}
               <Box
                 className="map-overlay"
                 sx={{
@@ -139,7 +137,7 @@ export default function HomesRegion() {
                   <ZoomInIcon fontSize="large" />
                 </IconButton>
                 <Typography
-                  variant="h4" // Chỉnh lại h3 xuống h4 để cân đối hơn trong Card
+                  variant="h4"
                   sx={{
                     fontWeight: 900,
                     mb: 1,
@@ -152,11 +150,10 @@ export default function HomesRegion() {
                 <Typography
                   sx={{ fontWeight: 600, fontSize: "0.85rem", opacity: 0.8 }}
                 >
-                  Nhấn để khám phá các địa danh và Pokémon bản địa
+                  Tap to discover local locations and Pokémon.
                 </Typography>
               </Box>
 
-              {/* Nhãn tên vùng (Luôn hiển thị khi chưa hover) */}
               <Stack
                 direction="row"
                 alignItems="center"

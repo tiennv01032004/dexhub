@@ -14,26 +14,10 @@ import { CatchingPokemon, AutoAwesome } from "@mui/icons-material";
 import Link from "next/link";
 import { useGetAbilityListQuery } from "@/store/services/pokeApi";
 import { AbilityDetail } from "@/types/AbilityDetail";
-import { useEffect, useState } from "react";
-import { client } from "@/lib/contentful";
 import Banner from "@/components/layout/Banner";
 
 export default function AbilitiesPage() {
   const { data: abilities, isLoading } = useGetAbilityListQuery(undefined);
-
-  // const [banner, setBanner] = useState<any>(null);
-
-  // useEffect(() => {
-  //   const fetchBanner = async () => {
-  //     const response = await client.getEntries({
-  //       content_type: "banner",
-  //       "fields.title": "abilities",
-  //     });
-  //     if (response.items.length > 0) setBanner(response.items[0]);
-  //   };
-
-  //   fetchBanner();
-  // }, []);
 
   if (isLoading || !abilities) {
     return (

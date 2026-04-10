@@ -31,7 +31,6 @@ import { useRouter } from "next/navigation";
 
 export default function HomePokemon() {
   const theme = useTheme();
-  // Kiểm tra xem màn hình có nhỏ hơn 'sm' (600px) hay không
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const { data: generation } = useGetGenerationListQuery(undefined);

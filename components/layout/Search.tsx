@@ -14,7 +14,6 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-// Giả sử bạn import các hooks này từ store của bạn
 import {
   useGetPokemonListQuery,
   useGetItemListQuery,

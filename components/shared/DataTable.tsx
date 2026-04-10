@@ -28,23 +28,23 @@ import {
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-interface DataTableProps<TData> {
-  data: TData[];
-  columns: ColumnDef<TData, any>[];
+interface DataTableProps {
+  data: any[];
+  columns: ColumnDef<any, any>[];
   columnFilters?: ColumnFiltersState;
   pageSize?: number;
   resetTrigger?: string;
   showPagination?: boolean;
 }
 
-export default function DataTable<TData>({
+export default function DataTable({
   data,
   columns,
   columnFilters = [],
   pageSize = 20,
   resetTrigger,
   showPagination = true,
-}: DataTableProps<TData>) {
+}: DataTableProps) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const router = useRouter();

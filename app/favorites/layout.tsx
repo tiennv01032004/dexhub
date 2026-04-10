@@ -8,7 +8,6 @@ export default function FavoritesLayout({
   return <section>{children}</section>;
 }
 
-// app/favorites/page.tsx
 export const metadata: Metadata = {
   title: "Pokemon Yêu Thích",
   description:

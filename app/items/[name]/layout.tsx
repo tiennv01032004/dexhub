@@ -13,7 +13,6 @@ type Props = {
   params: { name: string };
 };
 
-// Hàm tạo Metadata động
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { name } = await params;
   const formattedName = capitalizeName(name);

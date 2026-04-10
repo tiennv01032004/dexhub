@@ -40,7 +40,6 @@ export default function ItemList() {
     return itemCategoryDetail?.items || [];
   }, [categoryParams, items, itemCategoryDetail]);
 
-  // Virtualizer tính toán dựa trên số cột thay đổi
   const rowCount = Math.ceil(displayItems.length / columns);
   const virtualizer = useWindowVirtualizer({
     count: rowCount,

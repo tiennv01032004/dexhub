@@ -11,7 +11,6 @@ const TRAINERS = [
     name: "Cynthia",
     role: "Champion",
     region: "Sinnoh",
-    // Link artwork chất lượng cao từ PokeDB
     image:
       "https://img.pokemondb.net/sprites/trainers/heartgold-soulsilver/cynthia.png",
     color: "#4A5568",
@@ -100,7 +99,6 @@ export default function HomeTrainers() {
                   },
                 }}
               >
-                {/* Khung chứa ảnh */}
                 <Box
                   sx={{
                     width: 90,
@@ -108,7 +106,7 @@ export default function HomeTrainers() {
                     borderRadius: "20px",
                     bgcolor: alpha(trainer.color, 0.08),
                     display: "flex",
-                    alignItems: "flex-end", // Trainer thường đứng trên mặt đất
+                    alignItems: "flex-end",
                     justifyContent: "center",
                     overflow: "hidden",
                     flexShrink: 0,

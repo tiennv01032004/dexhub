@@ -1,5 +1,10 @@
+import { Suspense } from "react";
 import PokemonWrapper from "./components";
 
 export default function Pokemon() {
-  return <PokemonWrapper />;
+  return (
+    <Suspense>
+      <PokemonWrapper />;
+    </Suspense>
+  );
 }

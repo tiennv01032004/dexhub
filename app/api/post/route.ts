@@ -8,10 +8,8 @@ export async function GET() {
   });
 
   try {
-    // Gọi Contentful để lấy danh sách bài viết thực sự
     const response = await client.getEntries({ content_type: "blog" });
 
-    // Trả về mảng các bài viết (items)
     return NextResponse.json(response.items);
   } catch (error) {
     console.error("Contentful Error:", error);

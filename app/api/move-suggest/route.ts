@@ -23,10 +23,8 @@ export async function POST(req: Request) {
       pokeData.moves.map((m: any) => m.move.name.toLowerCase()),
     );
 
-    // Lấy 150 chiêu cuối (Chiêu mạnh thường nằm ở cuối danh sách API)
     const limitedMoves = Array.from(validMovesSet);
 
-    // 2. Gọi Groq với Prompt tối ưu
     const response = await fetch(
       "https://api.groq.com/openai/v1/chat/completions",
       {
@@ -77,7 +75,6 @@ export async function POST(req: Request) {
     if (!response.ok) {
       const errorData = await response.json();
 
-      // Kiểm tra nếu là lỗi Rate Limit (429)
       if (response.status === 429) {
         return NextResponse.json(
           {

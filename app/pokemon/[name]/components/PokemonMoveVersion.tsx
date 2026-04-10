@@ -110,14 +110,14 @@ export default function PokemonMoveVersion() {
 
           tm: filtered
             .filter(
-              (m: VersionGroupDetail) =>
+              (m: any) =>
                 m.move_learn_method.name === "machine" &&
                 !hmList.includes(m.name),
             )
             .map((m: VersionGroup) => Dex.moves.get(m.name)),
           hm: filtered
             .filter(
-              (m: VersionGroupDetail) =>
+              (m: any) =>
                 m.move_learn_method.name === "machine" &&
                 hmList.includes(m.name),
             )
